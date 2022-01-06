@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rafaelsanzio/typescript-setup -f Dockerfile.dev .
+  - docker build -t rafaelsanzio/tdd-multi-currencies -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true rafaelsanzio/typescript-setup npm run test
+  - docker run -e CI=true rafaelsanzio/tdd-multi-currencies npm run test
